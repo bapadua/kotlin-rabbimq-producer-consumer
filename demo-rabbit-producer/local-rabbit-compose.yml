@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  rabbitmq3:
+    container_name: "local-rabbitmq"
+    image: rabbitmq:3-management
+    restart: always
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+      - RABBITMQ_DEFAULT_VHOST:local-vhost
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    volumes:
+      - ./data:/var/lib/rabbitmq

@@ -1,0 +1,9 @@
+server:
+  port: ${server_port:8085}
+spring:
+  rabbitmq:
+    host: ${rabbit_host:localhost}
+    port: ${rabbit_port:5672}
+    username: ${rabbit_user:guest}
+    password: ${rabbit_pass:guest}
+    virtual-host: ${rabbit_vhost:local-vhost}
